@@ -13,8 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
     gameMode = 0;
     currentPlayer = 1;
     playerSelection = 1;
+    ended = 0;
 
     const instructionText = document.getElementById("instructionText");
+    const winnerText = document.getElementById("winnerText");
+    winnerText.style.display = 'none';
+
+    let array = Array(9).fill(0);
 
     // If the player tries to play before selecting game Mode
 
@@ -23,17 +28,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell00Img.src = "media/xSymbol.png";
+            array[0] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell00Img.src = "media/oSymbol.png";
+            array[0] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell00Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[0] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -42,17 +52,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell01Img.src = "media/xSymbol.png";
+            array[1] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell01Img.src = "media/oSymbol.png";
+            array[1] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell01Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[1] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -61,17 +76,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell02Img.src = "media/xSymbol.png";
+            array[2] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell02Img.src = "media/oSymbol.png";
+            array[2] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell02Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[2] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -80,17 +100,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell10Img.src = "media/xSymbol.png";
+            array[3] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell10Img.src = "media/oSymbol.png";
+            array[3] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell10Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[3] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -99,17 +124,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell11Img.src = "media/xSymbol.png";
+            array[4] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell11Img.src = "media/oSymbol.png";
+            array[4] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell11Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[4] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -118,17 +148,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell12Img.src = "media/xSymbol.png";
+            array[5] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell12Img.src = "media/oSymbol.png";
+            array[5] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell12Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[5] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -137,17 +172,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell20Img.src = "media/xSymbol.png";
+            array[6] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell20Img.src = "media/oSymbol.png";
+            array[6] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell20Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[6] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -156,17 +196,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell21Img.src = "media/xSymbol.png";
+            array[7] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell21Img.src = "media/oSymbol.png";
+            array[7] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell21Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[7] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -175,17 +220,22 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Choose the desired game mode before playing!");
         } else if (gameMode === 1 && currentPlayer === 1) {
             cell22Img.src = "media/xSymbol.png";
+            array[8] = "x";
+            winnerCheck();
             instructionText.textContent = "Player 2's turn!";
             currentPlayer = 2;
         } else if (gameMode === 1 && currentPlayer === 2) {
             cell22Img.src = "media/oSymbol.png";
+            array[8] = "o";
+            winnerCheck();
             instructionText.textContent = "Player 1's turn!";
             currentPlayer = 1;
-        } else if (gameMode === 2 && currentPlayer === 1) {
+        } else if (gameMode === 2) {
             cell22Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-            currentPlayer = 2;
+            array[8] = "x";
+            winnerCheck();
             randomPlay();
+            winnerCheck();
         }
     });
 
@@ -203,6 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("pvpBtn").disabled = true;
         document.getElementById("pvcBtn").disabled = true;
         instructionText.textContent = "Player 1's turn!";
+        instructionText.style.display = 'none';
     });
 
     const cell00Img = document.getElementById("cell00Img");
@@ -216,177 +267,124 @@ document.addEventListener("DOMContentLoaded", function() {
     const cell22Img = document.getElementById("cell22Img");
 
     function randomPlay() {
-        var cellList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        var randomIndex = Math.floor(Math.random() * cellList.length);
-
-        if (randomIndex === 1) {
-            if (cell00Img.src === "") {
-                cell00Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 2) {
-            if (cell01Img.src === "") {
-                cell01Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 3) {
-            if (cell02Img.src === "") {
-                cell02Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 4) {
-            if (cell10Img.src === "") {
-                cell10Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 5) {
-            if (cell11Img.src === "") {
-                cell11Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 6) {
-            if (cell12Img.src === "") {
-                cell12Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 7) {
-            if (cell20Img.src === "") {
-                cell20Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 8) {
-            if (cell21Img.src === "") {
-                cell21Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        } else if (randomIndex === 9) {
-            if (cell22Img.src === "") {
-                cell22Img.src = "media/oSymbol.png";
-                currentPlayer = 1;
-            } else {
-                randomPlay();
-            }
-        }
-    }
-
-    document.getElementById("xSelectDiv").addEventListener("click", function() {
-        playerSelection = 1;
-
-        document.getElementById("cell00").addEventListener("click", function() {
-            cell00Img.src = "media/xSymbol.png";
-            instructionText.textContent = "Player 2's turn!";
-        });
-
-    });
-
-    document.getElementById("oSelectDiv").addEventListener("click", function() {
-        playerSelection = 0;
-
-        document.getElementById("cell00").addEventListener("click", function() {
+        if (cell00Img.src === "") {
             cell00Img.src = "media/oSymbol.png";
-        });
-    });
-
-    /* The following functions will be implemented for both player vs player and player vs computer.
-        The only difference is that when a player is playing against the computer, the player
-        will only get to play with the symbol "x" and the computer will only get to play using the
-        symbol "o". The computer will randomly select a sell in the gameplay grid that does not 
-        already have a symbol inside of it. It will place the symbol "o" up until either player wins
-        or the game ends with a draw. */
-
-    // function that checks if player 1 (player playing with x) won
-    /* function player1Won () {
-        function rowWin() {
-            for (i = 0; i <= 2; i++) {
-                if (cell[i][0].contents == cell[i][1].contents == cell[i][2].contents) {
-                    player 1 won;
-                }
-            }
-        }
-
-        function columnWin() {
-            for (i = 0; i <= 2; i++) {
-                if (cell[0][i].contents == cell[1][i].contents == cell[2][i].contents) {
-                    player 1 won;
-                }
-            }
-        }
-
-        function diagonalWin() {
-            if ((cell[0][0].contents == cell[1][1].contents == cell[2][2].contents) || (cell[0][2].contents == cell[1][1].contents == cell[2][0].contents)) {
-                player 1 won;
-            }
+            array[0] = "o";
+        } else if (cell01Img.src === "") {
+            cell01Img.src = "media/oSymbol.png";
+            array[1] = "o";
+        } else if (cell02Img.src === "") {
+            cell02Img.src = "media/oSymbol.png";
+            array[2] = "o";
+        } else if (cell10Img.src === "") {
+            cell10Img.src = "media/oSymbol.png";
+            array[3] = "o";
+        } else if (cell11Img.src === "") {
+            cell11Img.src = "media/oSymbol.png";
+            array[4] = "o";
+        } else if (cell12Img.src === "") {
+            cell12Img.src = "media/oSymbol.png";
+            array[5] = "o";
+        } else if (cell20Img.src === "") {
+            cell20Img.src = "media/oSymbol.png";
+            array[6] = "o";
+        } else if (cell21Img.src === "") {
+            cell21Img.src = "media/oSymbol.png";
+            array[7] = "o";
+        } else if (cell22Img.src === "") {
+            cell22Img.src = "media/oSymbol.png";
+            array[8] = "o";
         }
     }
 
+    function winnerCheck () {
+        // Vertical Check
 
-    // function that checks if player 2 (player playing with o) won
-    /* function player2Won () {
-        function rowWin() {
-            for (i = 0; i <= 2; i++) {
-                if (cell[i][0].contents == cell[i][1].contents == cell[i][2].contents) {
-                    player 2 won;
-                }
-            }
+        if(array[0] === "x" && array[3] === "x" && array[6] === "x"){
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[0] === "o" && array[3] === "o" && array[6] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[1] === "x" && array[4] === "x" && array[7] === "x") {
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[1] === "o" && array[4] === "o" && array[7] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[2] === "x" && array[5] === "x" && array[8] === "x") {
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[2] === "o" && array[5] === "o" && array[8] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
         }
 
-        function columnWin() {
-            for (i = 0; i <= 2; i++) {
-                if (cell[0][i].contents == cell[1][i].contents == cell[2][i].contents) {
-                    player 2 won;
-                }
-            }
+        // Horizontal Check
+
+        if(array[0] === "x" && array[1] === "x" && array[2] === "x"){
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[0] === "o" && array[1] === "o" && array[2] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[3] === "x" && array[4] === "x" && array[5] === "x") {
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[3] === "o" && array[4] === "o" && array[5] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[6] === "x" && array[7] === "x" && array[8] === "x") {
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[6] === "o" && array[7] === "o" && array[8] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
         }
 
-        function diagonalWin() {
-            if ((cell[0][0].contents == cell[1][1].contents == cell[2][2].contents) || (cell[0][2].contents == cell[1][1].contents == cell[2][0].contents)) {
-                player 2 won;
-            }
+        // Diagonal Check
+
+        if(array[2] === "x" && array[4] === "x" && array[6] === "x"){
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[2] === "o" && array[4] === "o" && array[6] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[0] === "x" && array[4] === "x" && array[8] === "x") {
+            winnerText.textContent = "Player 1 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
+        } else if (array[0] === "o" && array[4] === "o" && array[8] === "o") {
+            winnerText.textContent = "Player 2 Won!";
+            winnerText.style.display = 'block';
+            gameEnded();
         }
-    }*/
 
+        // Draw Check
 
-    // function that checks for draw (full grid)
-    /* function checkForDraw () {
-        for (int i = 0; i<= 2; i++) {
-            for (int j = 0; j<= 2; j++) {
-                if grid[i][j] == 'no image'
-                return false
-        return true
-            }
+        if (array[0] != "0" && array[1] != "0" && array[2] != "0" && array[3] != "0" && array[4] != "0" && array[5] != "0" && array[6] != "0" && array[7] != "0" && array[8] != "0") {
+            winnerText.textContent = "Draw!";
+            winnerText.style.display = 'block';
+            gameEnded();
         }
     }
 
-
-    // This code is for the random selection of a cell when it is the computer's turn to play
-    function randomPlay() {
-        int i;
-        int j;
-        while (true) {
-            rand select i such that i is in range 0-2
-            rand select j such that j is in range 0-2
-            if (cell[i][j] == 'no image'){
-                cell[i][j].insert symbol "o"
-                break;
-            }
-        }
+    function gameEnded() {
+        ended = 1;
     }
-
-    */
+    
 });

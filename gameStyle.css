@@ -6,7 +6,8 @@
 
 body{
     margin: 0;
-    background-image: linear-gradient(blue, red);
+    /*background-image: linear-gradient(blue, red);*/
+    background-color: black;
 }
 
 /* Home Page Section */
@@ -29,7 +30,7 @@ body{
 
 /* Player Turn Section */
 
-#playerTurnText {
+#instructionText {
     color: white;
     position: fixed;
     top: 20%;

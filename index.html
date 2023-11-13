@@ -1,0 +1,67 @@
+<!-- Course: SENG 513 -->
+<!-- Date: OCT 23, 2023 -->
+<!-- Assignment 2 -->
+<!-- Name: Francisco Huayhualla -->
+<!-- UCID: 30091238 -->
+
+<html>
+    <head>
+        <title>
+            Tic Tac Toe
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script type="text/javascript" src="engine.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Music Section -->
+
+        <audio autoplay loop>
+            <source src="media/titaniumAlishaSutudo.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Title Section -->
+
+        <h1 id="gameTitle">Tic Tac Toe</h1>
+
+        <!-- Information Section-->
+
+            <div id="infoSection">
+                <!-- Target Platform Section -->
+
+                <h2 id="targetPlatformTitle">Target Platform:</h2>
+                <p>The target platform intended is <b>Desktop</b>.</p>
+
+                <!-- Game Genre Section -->
+
+                <h2>Game Genre:</h2>
+                <p>The game genre for Tic Tac Toe is <b>puzzle</b>, <b>role-playing</b>, and <b>strategy</b>.</p>
+
+                <!-- Game's Objective Section -->
+
+                <h2>Game's Objective:</h2>
+                <p>Tic Tac Toe is a two-player game where players take turns marking spaces in a 3x3 grid. The objective is to get three of your marks in a row, either horizontally, vertically, or diagonally, before your opponent does. If played optimally by both players, the game always ends in a draw.</p>
+                
+                <!-- Rules of the Game Section -->
+
+                <h2>Rules of the Game:</h2>
+                <ul>
+                    <li>The game is played on a 3x3 grid.</li>
+                    <li>Player 1 is assigned the symbol X, and Player 2 is assigned the symbol O.</li>
+                    <li>Players take turns placing their symbols on an empty square of the grid.</li>
+                    <li>The first player to get three of their symbols in a row wins the game.</li>
+                    <li>If all the squares on the grid are filled and no player has won, the game is a draw.</li>
+                </ul>
+
+                <!-- Game Mechanics Section -->
+
+                <h2>Game Mechanics:</h2>
+                <p>The game will start by informing player 1 that it is his/her turn to play. This player will then input a number 1-9 such that 1 represents square (0, 0), 2 represents square (0, 1), up until square 9 (2, 2). Next, the game will inform player two that it is his/her turn to play. The game loops with this process up until the game ends with a win for player 1, a win for player 2, or a draw.</p>
+
+                <!-- Start Game Section -->
+                <center><button id="startBtn">Start Game!</button></center>
+            </div>
+
+    </body>
+</html>

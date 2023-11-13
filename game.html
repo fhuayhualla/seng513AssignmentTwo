@@ -1,0 +1,68 @@
+<!-- Course: SENG 513 -->
+<!-- Date: OCT 23, 2023 -->
+<!-- Assignment 2 -->
+<!-- Name: Francisco Huayhualla -->
+<!-- UCID: 30091238 -->
+
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" type="text/css" href="gameStyle.css"/>
+        <script type="text/javascript" src="gameEngine.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Home Page Section -->
+
+        <a id="homeBtn" href="index.html"></a>
+
+        <!-- Player Turn Section -->
+
+        <h1 id="playerTurnText">Player 1's turn!</h1>
+
+        <!-- Game Input Section -->
+
+        <div id="selectionDiv">
+            <div id="xSelectDiv">
+                <!-- image is from https://www.rawpixel.com/image/10104170/png-white-background-people -->
+                <img src="media/xSymbol.png" id="xSelectIcon"/>
+            </div>
+            <div id="oSelectDiv">
+                <img src="media/oSymbol.png" id="xSelectIcon"/>
+            </div>
+        </div>
+
+        <!-- Game Mode Selection -->
+
+        <div id="gameModeSelection">
+            <button id="pvpBtn" class="gameModeBtns">Player Vs. Player</button>
+            <button id="pvcBtn" class="gameModeBtns">Player Vs. Computer</button>
+        </div>
+
+        <!-- Gameplay Section -->
+
+        <div id="gamePlayBoard">
+            <div id="grid">
+                <div class="cell" id="cell00"><img id="cell00Img" class="gridImg"/></div>
+                <div class="cell" id="cell01"><img id="cell01Img" class="gridImg"/></div>
+                <div class="cell" id="cell02"><img id="cell02Img" class="gridImg"/></div>
+                <div class="cell" id="cell10"><img id="cell10Img" class="gridImg"/></div>
+                <div class="cell" id="cell11"><img id="cell11Img" class="gridImg"/></div>
+                <div class="cell" id="cell12"><img id="cell12Img" class="gridImg"/></div>
+                <div class="cell" id="cell20"><img id="cell20Img" class="gridImg"/></div>
+                <div class="cell" id="cell21"><img id="cell21Img" class="gridImg"/></div>
+                <div class="cell" id="cell22"><img id="cell22Img" class="gridImg"/></div>
+              </div>
+        </div>
+
+        <!-- Winner Section -->
+
+        <h1 id="winnerText">The Winner is Player 1!</h1>
+
+        <!-- Play Again Section -->
+
+        <a id="playAgainBtn"></a>
+
+    </body>
+</html>

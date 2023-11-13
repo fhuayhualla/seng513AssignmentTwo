@@ -1,0 +1,62 @@
+/* Course: SENG 513 */
+/* Date: OCT 23, 2023 */
+/* Assignment 2 */
+/* Name: Francisco Huayhualla */
+/* UCID: 30091238 */
+
+body {
+    margin: 0;
+    background-image: linear-gradient(red, blue);
+    color: white;
+}
+
+/* Title Section */
+
+#gameTitle {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 50px;
+}
+
+/* Information Section */
+
+#infoSection {
+    width: 80%;
+    margin-left: 10%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    color: black;
+}
+
+#targetPlatformTitle {
+    padding-top: 2%;
+}
+
+h2 {
+    padding-left: 3%;
+}
+
+p{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+}
+
+ul {
+    padding-left: 5%;
+}
+
+#startBtn {
+    background-color:blueviolet;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+    cursor: url(media/minecraft.png), auto;
+}

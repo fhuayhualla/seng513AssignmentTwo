@@ -1,0 +1,191 @@
+/* Course: SENG 513 */
+/* Date: OCT 23, 2023 */
+/* Assignment 2 */
+/* Name: Francisco Huayhualla */
+/* UCID: 30091238 */
+
+body{
+    margin: 0;
+    background-image: linear-gradient(blue, red);
+}
+
+/* Home Page Section */
+
+#homeBtn {
+    /*Image by Clker-Free-Vector-Images on Pixabay https://pixabay.com/vectors/house-home-icon-symbol-sign-309113/ */
+    background-image: url(media/home.png);
+    background-size: cover;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 1%;
+    margin-left: 1%;
+    position: fixed;
+}
+
+#homeBtn:hover {
+    cursor: pointer;
+}
+
+/* Player Turn Section */
+
+#playerTurnText {
+    color: white;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Game Input Section */
+
+#selectionDiv {
+    background-color: antiquewhite;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 110px;
+    border-radius: 10px;
+}
+
+#xSelectDiv {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#xSelectDiv:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+#xSelectIcon {
+    width: 100%;
+}
+
+#oSelectDiv {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    float: right;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#oSelectDiv:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+#oSelectIcon {
+    width: 100%;
+}
+
+/* Game Mode Selection */
+
+#gameModeSelection {
+    float: right;
+    margin-top: 1%;
+}
+
+.gameModeBtns {
+    border: 0;
+    border-radius: 10px;
+    background-color: aquamarine;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 10px;
+}
+
+.gameModeBtns:hover {
+    cursor: pointer;
+}
+
+/* Gameplay Section */
+
+#gamePlayBoard {
+    background-color: antiquewhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+#grid {
+    display: grid;
+    /* Got the below two lines from https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+}
+
+.gridImg {
+    width: 50%;
+    margin: 0;
+    margin-left: 25%;
+}
+  
+.cell {
+    border: 1px solid black;
+}
+
+.cell:hover {
+    background-color:aliceblue;
+    cursor: pointer;
+}
+
+#cell00 {
+    border-top-left-radius: 10px;
+}
+
+#cell02 {
+    border-top-right-radius: 10px;
+}
+
+#cell20 {
+    border-bottom-left-radius: 10px;
+}
+
+#cell22 {
+    border-bottom-right-radius: 10px;
+}
+
+/* Winner Section */
+
+#winnerText {
+    color: white;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Play Again Section */
+
+#playAgainBtn {
+    /*Image by OpenClipart-Vectors on Pixabay https://pixabay.com/vectors/arrow-cycle-recycle-redo-reuse-159146/ */
+    background-image: url(media/restart.png);
+    background-size: cover;
+    border: none;
+    width: 80px;
+    height: 100px;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#playAgainBtn:hover {
+    cursor: pointer;
+}

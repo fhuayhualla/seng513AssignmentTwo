@@ -4,18 +4,208 @@
 /* Name: Francisco Huayhualla */
 /* UCID: 30091238 */
 
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("playAgainBtn").addEventListener("click", function() {
         window.location.reload();
     });
 
+    gameMode = 0;
     currentPlayer = 1;
     playerSelection = 1;
 
-    const playerTurnText = document.getElementById("playerTurnText");
+    const instructionText = document.getElementById("instructionText");
+
+    // If the player tries to play before selecting game Mode
+
+    document.getElementById("cell00").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell00Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell00Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell00Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell01").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell01Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell01Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell01Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell02").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell02Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell02Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell02Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell10").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell10Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell10Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell10Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell11").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell11Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell11Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell11Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell12").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell12Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell12Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell12Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell20").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell20Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell20Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell20Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell21").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell21Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell21Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell21Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    document.getElementById("cell22").addEventListener("click", function() {
+        if(gameMode === 0){
+            alert("Choose the desired game mode before playing!");
+        } else if (gameMode === 1 && currentPlayer === 1) {
+            cell22Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+        } else if (gameMode === 1 && currentPlayer === 2) {
+            cell22Img.src = "media/oSymbol.png";
+            instructionText.textContent = "Player 1's turn!";
+            currentPlayer = 1;
+        } else if (gameMode === 2 && currentPlayer === 1) {
+            cell22Img.src = "media/xSymbol.png";
+            instructionText.textContent = "Player 2's turn!";
+            currentPlayer = 2;
+            randomPlay();
+        }
+    });
+
+    // If the player selects the game Mode
+
+    document.getElementById("pvpBtn").addEventListener("click", function() {
+        gameMode = 1; // player vs player
+        document.getElementById("pvpBtn").disabled = true;
+        document.getElementById("pvcBtn").disabled = true;
+        instructionText.textContent = "Player 1's turn!";
+    });
+
+    document.getElementById("pvcBtn").addEventListener("click", function() {
+        gameMode = 2; // player vs computer
+        document.getElementById("pvpBtn").disabled = true;
+        document.getElementById("pvcBtn").disabled = true;
+        instructionText.textContent = "Player 1's turn!";
+    });
 
     const cell00Img = document.getElementById("cell00Img");
-    //The following constants will be used for futture implementations of the game
     const cell01Img = document.getElementById("cell01Img");
     const cell02Img = document.getElementById("cell02Img");
     const cell10Img = document.getElementById("cell10Img");
@@ -25,12 +215,82 @@ document.addEventListener("DOMContentLoaded", function() {
     const cell21Img = document.getElementById("cell21Img");
     const cell22Img = document.getElementById("cell22Img");
 
+    function randomPlay() {
+        var cellList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var randomIndex = Math.floor(Math.random() * cellList.length);
+
+        if (randomIndex === 1) {
+            if (cell00Img.src === "") {
+                cell00Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 2) {
+            if (cell01Img.src === "") {
+                cell01Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 3) {
+            if (cell02Img.src === "") {
+                cell02Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 4) {
+            if (cell10Img.src === "") {
+                cell10Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 5) {
+            if (cell11Img.src === "") {
+                cell11Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 6) {
+            if (cell12Img.src === "") {
+                cell12Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 7) {
+            if (cell20Img.src === "") {
+                cell20Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 8) {
+            if (cell21Img.src === "") {
+                cell21Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        } else if (randomIndex === 9) {
+            if (cell22Img.src === "") {
+                cell22Img.src = "media/oSymbol.png";
+                currentPlayer = 1;
+            } else {
+                randomPlay();
+            }
+        }
+    }
+
     document.getElementById("xSelectDiv").addEventListener("click", function() {
         playerSelection = 1;
 
         document.getElementById("cell00").addEventListener("click", function() {
             cell00Img.src = "media/xSymbol.png";
-            playerTurnText.textContent = "Player 2's turn!";
+            instructionText.textContent = "Player 2's turn!";
         });
 
     });
@@ -130,4 +390,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     */
 });
-

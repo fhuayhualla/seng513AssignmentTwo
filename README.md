@@ -2,7 +2,7 @@
 
 ## Overview
 **Title:** TicTacToe  
-**Target Platform:** Desktop  
+**Target Platform:** Desktop (use Firefox) 
 **Game Genre:** Strategy  
 
 ## Objective

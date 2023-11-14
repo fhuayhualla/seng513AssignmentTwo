@@ -6,8 +6,7 @@
 
 body{
     margin: 0;
-    /*background-image: linear-gradient(blue, red);*/
-    background-color: black;
+    background-image: linear-gradient(blue, red);
 }
 
 /* Home Page Section */
